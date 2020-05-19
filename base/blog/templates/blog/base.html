@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Maksim Silkin Resume</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive Resume Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="{% static 'blog/pillar-1.css' %}">
+
+
+</head>
+
+<body>
+
+    <article class="resume-wrapper text-center position-relative">
+	    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
+		    <header class="resume-header pt-4 pt-md-0">
+			    <div class="media flex-column flex-md-row">
+				    <img class="mr-3 img-fluid picture mx-auto" src="{% static 'blog/images/profile.jpg' %}" alt="">
+				    <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
+					    <div class="primary-info">
+						    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Maksim Silkin</h1>
+						    <div class="title mb-3">Back End Web Developer</div>
+						    <ul class="list-unstyled">
+							    <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>maxsilkin@gmail.com</a></li>
+							    <li><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>609 970 9893</a></li>
+						    </ul>
+					    </div><!--//primary-info-->
+					    <div class="secondary-info ml-md-auto mt-2">
+						    <ul class="resume-social list-unstyled">
+                  <li class="mb-3"><a href="https://www.linkedin.com/in/max-silkin/"><span class="fa-container text-center mr-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/</a></li>
+                 <li class="mb-3"><a href="https://github.com/max14632"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/max14632</a></li>
+                 <li class="mb-3"><a href="#"><span class="fa-container text-center mr-2"><i class="fab fa-codepen fa-fw"></i></span>codepen.io</a></li>
+                 <li><a href="maxsilkin.com:8080/blog"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>maxsilkin.com/blog</a></li>
+						    </ul>
+					    </div><!--//secondary-info-->
+
+				    </div><!--//media-body-->
+			    </div><!--//media-->
+		    </header>
+        <div class="resume-body p-5">
+          {% block content %}{% endblock content %}
+    </article>
+
+
+
+
+
+
+</body>
+</html>
