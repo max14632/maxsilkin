@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['165.227.115.112','maxsilkin.com']
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
