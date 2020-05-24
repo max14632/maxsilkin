@@ -53,6 +53,13 @@
 			    </div><!--//media-->
 		    </header>
         <div class="resume-body p-5">
+          {% if messages %}
+            {% for message in messages %}
+              <div class='alert alert-{{ message.tags }}'>
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
           {% block content %}{% endblock content %}
     </article>
 
