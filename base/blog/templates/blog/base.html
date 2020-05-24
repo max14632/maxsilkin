@@ -44,9 +44,14 @@
 						    <ul class="resume-social list-unstyled">
                   <li class="mb-3"><a href="https://www.linkedin.com/in/max-silkin/"><span class="fa-container text-center mr-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/</a></li>
                  <li class="mb-3"><a href="https://github.com/max14632"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/max14632</a></li>
-                 <li class="mb-3"><a href="#"><span class="fa-container text-center mr-2"><i class="fab fa-codepen fa-fw"></i></span>codepen.io</a></li>
-                 <li><a href="maxsilkin.com:8080/blog"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>maxsilkin.com/blog</a></li>
-						    </ul>
+                 <li class="mb-3"><a href="{% url 'blog-home' %}"><span class="fa-container text-center mr-2"><i class="fab fa-codepen fa-fw"></i></span>maxsilkin.com/blog</a></li>
+                 {% if user.is_authenticated %}
+                    <li><a href="{% url 'profile' %}"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>Profile</a></li>
+                    <li><a href="{% url 'logout' %}"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>Sign Out</a></li>
+                 {% else %}
+                    <li><a href="{% url 'login' %}"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>Sign In</a></li>
+                 {% endif %}
+                </ul>
 					    </div><!--//secondary-info-->
 
 				    </div><!--//media-body-->
