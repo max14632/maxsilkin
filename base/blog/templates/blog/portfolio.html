@@ -1,252 +1,285 @@
-{% load static %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
+
 <head>
-    <title>Maksim Silkin Resume</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive Resume Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-    <link rel="shortcut icon" href="favicon.ico">
+  <title>iPortfolio Bootstrap Template - Index</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
-    <!-- FontAwesome JS-->
-    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
 
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="{% static 'blog/pillar-1.css' %}">
+  <!-- Google Fonts -->
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'blog/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'blog/style.css' %}" rel="stylesheet">
 
 
 </head>
 
 <body>
 
-    <article class="resume-wrapper text-center position-relative">
-	    <div class="resume-wrapper-inner mx-auto text-left bg-white shadow-lg">
-		    <header class="resume-header pt-4 pt-md-0">
-			    <div class="media flex-column flex-md-row">
-				    <img class="mr-3 img-fluid picture mx-auto" src="{% static 'blog/images/profile.jpg' %}" alt="">
-				    <div class="media-body p-4 d-flex flex-column flex-md-row mx-auto mx-lg-0">
-					    <div class="primary-info">
-						    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Maksim Silkin</h1>
-						    <div class="title mb-3">Back End Web Developer</div>
-						    <ul class="list-unstyled">
-							    <li class="mb-2"><a href="#"><i class="far fa-envelope fa-fw mr-2" data-fa-transform="grow-3"></i>maxsilkin@gmail.com</a></li>
-							    <li><a href="#"><i class="fas fa-mobile-alt fa-fw mr-2" data-fa-transform="grow-6"></i>609 970 9893</a></li>
-						    </ul>
-					    </div><!--//primary-info-->
-					    <div class="secondary-info ml-md-auto mt-2">
-						    <ul class="resume-social list-unstyled">
-                  <li class="mb-3"><a href="https://www.linkedin.com/in/max-silkin/"><span class="fa-container text-center mr-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/</a></li>
-                 <li class="mb-3"><a href="https://github.com/max14632"><span class="fa-container text-center mr-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/max14632</a></li>
-                 <li class="mb-3"><a href="{% url 'blog-home' %}"><span class="fa-container text-center mr-2"><i class="fab fa-codepen fa-fw"></i></span>maxsilkin.com/blog</a></li>
-                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>Profile</a></li>
-                    <li><a href="{% url 'logout' %}"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>Sign Out</a></li>
-                 {% else %}
-                    <li><a href="{% url 'login' %}"><span class="fa-container text-center mr-2"><i class="fas fa-globe"></i></span>Sign In</a></li>
-                 {% endif %}
-                </ul>
-					    </div><!--//secondary-info-->
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
-				    </div><!--//media-body-->
-			    </div><!--//media-->
-		    </header>
-        <div class="resume-body p-5">
-          {% if messages %}
-            {% for message in messages %}
-              <div class='alert alert-{{ message.tags }}'>
-                {{ message }}
-              </div>
-            {% endfor %}
-          {% endif %}
-          <section class="resume-section summary-section mb-5">
-            <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Career Summary</h2>
-            <div class="resume-section-content">
-              <p class="mb-0">
-                  Energetic and passionate back-end web developer with strong organization, people, and research skills seeks a position in Web Development field to build knowledge and experience, as well as an opportunity to grow with your company.
-              </p>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="{% static 'blog/pictures/profile-new.jpg' %}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Max Silkin</a></h1>
+
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span> Skills</span></a></li>
+          <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+          <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Max Silkin</h1>
+      <p>Software Developer</p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Experience and Skills</h2>
+          <p>Self tought most of these skills through various resources like Udemy, coding challenges, and personal projects. Mastered skills like self motivation and determination. </p>
+        </div>
+
+        <ul class="list-group-flush">
+          <li class="list-group-item font-weight-bold">Programming Languages: <span class='pad font-weight-normal'>Python ❖ PHP ❖ HTML ❖ CSS ❖  jQuery</span></li>
+          <li class="list-group-item font-weight-bold">Tools: <span class='pad font-weight-normal'>MySQL ❖ Django ❖ Apache ❖ Git ❖ Ubuntu Server ❖ Linux Terminal ❖ SSH ❖ Bootstrap</span></li>
+          <li class="list-group-item font-weight-bold">Experience: <span class='pad font-weight-normal'>Designing Interactive Applications ❖ Web Scraping ❖ Project Planning ❖ Project Deployment ❖ DigitalOcean Cloud Services</span></li>
+          <li class="list-group-item font-weight-bold">Languages: <span class='pad font-weight-normal'>English ❖ Russian</span></li>
+        </ul>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Statistics</h2>
+          <p>
+            Through out past few years ive learned many new skills, completed countless courses and finished many projects.
+            Ive spent hours coding in different programming languages and weeks studying new information and ways to apply it in real world.
+            Here you can find statistics on some of these topics.
+          </p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+            <div class="count-box">
+              <i class="icofont-simple-smile"></i>
+              <span data-toggle="counter-up">1500+</span>
+              <p>Hours spent working with <strong>Python</strong>.</p>
             </div>
-          </section><!--//summary-section-->
-          <div class="row">
-            <div class="col-lg-9">
-              <section class="resume-section experience-section mb-5">
-                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Work Experience</h2>
-                <div class="resume-section-content">
-                  <div class="resume-timeline position-relative">
-                    <article class="resume-timeline-item position-relative pb-5">
+          </div>
 
-                      <div class="resume-timeline-item-header mb-2">
-                        <div class="d-flex flex-column flex-md-row">
-                            <h3 class="resume-position-title font-weight-bold mb-1">Django Web Site</h3>
-                            <div class="resume-company-name ml-auto">Personal Project</div>
-                        </div><!--//row-->
-                        <div class="resume-position-time">2019 - Present</div>
-                      </div><!--//resume-timeline-item-header-->
-                      <div class="resume-timeline-item-desc">
-                        <p>My goal with this project was to learn the process of creating a fully functional website as well as gaining experience working with Web Frameworks. During that time I've finished multiple courses on Python, Django, Flask, and MySql. As a result I gained more experience working in Linux Terminal, set up of Apache Web Server Software, using Git version-control system. Spent many hours experimenting with different Django features. Created, modified and implemented MySQL databases into the Django website I've created. </p>
-                        <h4 class="resume-timeline-item-desc-heading font-weight-bold">Achievements:</h4>
-                        <p>After finishing this project i have gained a lot of experience and knowledge about the creation of websites and using Web Frameworks like Django and Flask.</p>
-                        <ul>
-                          <li>Built a website from scratch. From buying a cloud hosting and installing Apache Web Server to implementing MySQL and setting up an Admin page</li>
-                          <li>Gained a lot of experience with Python, Django, MySQL, Git, and learned a lot of new tools like Apache Server, Linux Terminal, Bootstrap, </li>
-                        </ul>
-                        <h4 class="resume-timeline-item-desc-heading font-weight-bold">Technologies used:</h4>
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><span class="badge badge-primary badge-pill">Django</span></li>
-                          <li class="list-inline-item"><span class="badge badge-primary badge-pill">Python</span></li>
-                          <li class="list-inline-item"><span class="badge badge-primary badge-pill">MySQL</span></li>
-                          <li class="list-inline-item"><span class="badge badge-primary badge-pill">Apache</span></li>
-                          <li class="list-inline-item"><span class="badge badge-primary badge-pill">Bootstrap</span></li>
-                          <li class="list-inline-item"><span class="badge badge-primary badge-pill">Git</span></li>
-                        </ul>
-                      </div><!--//resume-timeline-item-desc-->
-
-                    </article><!--//resume-timeline-item-->
-
-
-
-
-                  </div><!--//resume-timeline-->
-
-
-
-
-
-
-                </div>
-              </section><!--//experience-section-->
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="count-box">
+              <i class="icofont-document-folder"></i>
+              <span data-toggle="counter-up">42</span>
+              <p><strong>Projects</strong> have been finished.</p>
             </div>
-            <div class="col-lg-3">
-              <section class="resume-section skills-section mb-5">
-                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Skills &amp; Tools</h2>
-                <div class="resume-section-content">
-                    <div class="resume-skill-item">
-                      <h4 class="resume-skills-cat font-weight-bold">Frontend</h4>
-                      <ul class="list-unstyled mb-4">
+          </div>
 
-                        <li class="mb-2">
-                            <div class="resume-skill-name">JQuery</div>
-                          <div class="progress resume-progress">
-                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                        </li>
-
-                        <li class="mb-2">
-                            <div class="resume-skill-name">Bootstrap</div>
-                          <div class="progress resume-progress">
-                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 30%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                        </li>
-                        <li class="mb-2">
-                            <div class="resume-skill-name">HTML/CSS</div>
-                          <div class="progress resume-progress">
-                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 83%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                        </li>
-                      </ul>
-                    </div><!--//resume-skill-item-->
-
-                    <div class="resume-skill-item">
-                        <h4 class="resume-skills-cat font-weight-bold">Backend</h4>
-                      <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <div class="resume-skill-name">Python</div>
-                          <div class="progress resume-progress">
-                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 63%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                        </li>
-                        <li class="mb-2">
-                            <div class="resume-skill-name">Django</div>
-                          <div class="progress resume-progress">
-                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                        </li>
-                        <li class="mb-2">
-                            <div class="resume-skill-name">Ruby/Rails</div>
-                          <div class="progress resume-progress">
-                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                        </li>
-                        <li class="mb-2">
-                            <div class="resume-skill-name">PHP</div>
-                          <div class="progress resume-progress">
-                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                        </li>
-                        <li class="mb-2">
-                            <div class="resume-skill-name">MySQL</div>
-                          <div class="progress resume-progress">
-                          <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                        </li>
-                      </ul>
-                    </div><!--//resume-skill-item-->
-
-                    <div class="resume-skill-item">
-                        <h4 class="resume-skills-cat font-weight-bold">Others</h4>
-                        <ul class="list-inline">
-                          <li class="list-inline-item"><span class="badge badge-light">Apache</span></li>
-                          <li class="list-inline-item"><span class="badge badge-light">Web Design</span></li>
-                          <li class="list-inline-item"><span class="badge badge-light">Git</span></li>
-                          <li class="list-inline-item"><span class="badge badge-light">Web Scraping</span></li>
-                          <li class="list-inline-item"><span class="badge badge-light">Ubuntu Server</span></li>
-                          <li class="list-inline-item"><span class="badge badge-light">SSH</span></li>
-                          <li class="list-inline-item"><span class="badge badge-light">Linux Terminal</span></li>
-                        </ul>
-                    </div><!--//resume-skill-item-->
-                </div><!--resume-section-content-->
-              </section><!--//skills-section-->
-              <section class="resume-section education-section mb-5">
-                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
-                <div class="resume-section-content">
-                  <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <div class="resume-degree font-weight-bold">West Deptford High School</div>
-                        <div class="resume-degree-time">2010 - 2014</div>
-                    </li>
-                    <li>
-                        <div class="resume-degree font-weight-bold">Web Development for E-commerce</div>
-                        <div class="resume-degree-org">Rowan College at Gloucester College</div>
-                        <div class="resume-degree-time">2014 - 2015</div>
-                    </li>
-                    <li>
-                        <div class="resume-degree font-weight-bold">Back End Web Development</div>
-                        <div class="resume-degree-org">Camden Community College</div>
-                        <div class="resume-degree-time">2020 - Present</div>
-                    </li>
-                  </ul>
-                </div>
-              </section><!--//education-section-->
-              <section class="resume-section language-section mb-5">
-                <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Language</h2>
-                <div class="resume-section-content">
-                  <ul class="list-unstyled resume-lang-list">
-                    <li class="mb-2"><span class="resume-lang-name font-weight-bold">Russian</span> <small class="text-muted font-weight-normal">(Native)</small></li>
-                    <li class="mb-2 align-middle"><span class="resume-lang-name font-weight-bold">English</span> <small class="text-muted font-weight-normal">(Professional)</small></li>
-                  </ul>
-                </div>
-              </section><!--//language-section-->
-
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="icofont-live-support"></i>
+              <span data-toggle="counter-up">18</span>
+              <p><strong>Udemy</strong> and other online courses finished.</p>
             </div>
-          </div><!--//row-->
-        </div><!--//resume-body-->
+          </div>
 
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="count-box">
+              <i class="icofont-users-alt-5"></i>
+              <span data-toggle="counter-up">2</span>
+              <p>Succesfully launched<strong> Websites</strong>.</p>
+            </div>
+          </div>
 
         </div>
 
+      </div>
+    </section><!-- End Facts Section -->
 
-    </article>
 
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Personal Projects</h2>
+        </div>
+
+        <div>
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-right">
+              <img src="{% static 'blog/pictures/profile-new.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3><a href="maxsilkin.com/business">Small Bussiness Website</a></h3>
+              <p class="font-italic">
+                Fully featured, interactive website fit for any kind of small/medium business. Admin dashboard along with new user registration, email confirmation, and fully functional user dashboard.
+
+              </p>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="icofont-rounded-right"></i> <strong>Python:</strong> Back-End Language</li>
+                    <li><i class="icofont-rounded-right"></i> <strong>Django:</strong> Web Framework used</li>
+                    <li><i class="icofont-rounded-right"></i> <strong>Git:</strong> Version Control System used</li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="icofont-rounded-right"></i> <strong>Bootstrap:</strong> Front-End styling</li>
+                    <li><i class="icofont-rounded-right"></i> <strong>MySQL:</strong> Database Management System of choice</li>
+
+                  </ul>
+                </div>
+              </div>
+              <p>
+                Intuitive application that i developed for small/medium bussiness to show off their product.
+                Includes fully functional Admin page with the ablity to add new products, discriptions and prices. Everything can be edited and deleted.
+                New user registration with confirmation email feature, every user has their own dashboard with basic information on their orders.
+                Thanks to Django Web Framework new features can be added and it is very customizable.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Below you will find all of the links you might need to contact me along with my LinkedIn profile. Please reach out with any questions you might have. Thank You!</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5  align-items-stretch">
+            <div class="info">
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p>maxsilkin@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p>609 970 9893</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>LinkedIn:</h4>
+                <p>
+                  <a href="https://www.linkedin.com/in/max-silkin/">linkedin.com/in/max-silkin/</a>
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+
+      <div class="nav-menu_c">
+        <a href=""> LinkedIn</a>
+        <a href=""> GitHub</a>
+        <a href=""> Indeed</a>
+      </div>
+
+
+
+    </div>
+  </footer><!-- End  Footer -->
 
 
 
 
 
 </body>
+
 </html>
