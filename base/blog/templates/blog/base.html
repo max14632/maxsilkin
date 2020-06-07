@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Max Silkin</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+
+  <!-- Google Fonts -->
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'blog/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'blog/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="{% static 'blog/pictures/profile-new.jpg' %}" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="{% url 'portfolio-home' %}">Max Silkin</a></h1>
+
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="{% url 'portfolio-home' %}"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span> Skills</span></a></li>
+          <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+          <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  {% block content %}{% endblock content %}
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+
+      <div class="nav-menu_c">
+        <a href=""> LinkedIn</a>
+        <a href=""> GitHub</a>
+        <a href=""> Indeed</a>
+      </div>
+
+
+
+    </div>
+  </footer><!-- End  Footer -->
+
+
+
+
+
+</body>
+
+</html>

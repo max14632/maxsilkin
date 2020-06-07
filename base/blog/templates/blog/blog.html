@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<main id="main">
+  <section id="facts" class="facts">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>My blog</h2>
+        <ul class="list-group-flush">
+            {% for post in posts %}
+                <!-- <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ post.title }}</h2> -->
+                <li class="list-group-item font-weight-bold">{{ post.title }} <br><br><span class='font-weight-normal'>{{ post.content }}</span></li>
+
+            {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock content %}
