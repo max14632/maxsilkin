@@ -10,8 +10,6 @@ from .models import Post #"folder" with all of the posts
 def home(request):
     return render(request, 'blog/portfolio.html')
 
-def business(request):
-    return render(request, 'blog/home.html')
 
 def blog(request):
     context = {
