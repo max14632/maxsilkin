@@ -34,13 +34,13 @@
 
       <div class="profile">
         <img src="{% static 'blog/pictures/profile-new.jpg' %}" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Max Silkin</a></h1>
+        <h1 class="text-light"><a href="{% url 'portfolio-home' %}">Max Silkin</a></h1>
 
       </div>
 
       <nav class="nav-menu">
         <ul>
-          <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li class="active"><a href="{% url 'portfolio-home' %}"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#resume"><i class="bx bx-file-blank"></i> <span> Skills</span></a></li>
           <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
           <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
@@ -144,7 +144,7 @@
         <div>
           <div class="row">
             <div class="col-lg-4" data-aos="fade-right">
-              <img src="{% static 'blog/pictures/profile-new.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'blog/pictures/business-example.jpg' %}" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
               <h3><a href="maxsilkin.com/business">Small Bussiness Website</a></h3>
