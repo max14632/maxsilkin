@@ -1,4 +1,12 @@
 {% extends "business/base.html" %}
 {% block content %}
-    <h1>Welcome to your dashboard {{ user.username }}</h1>
+  <div class="row pt-2">
+    <div class="colomn pr-5">
+      <h5><img class="rounded" src="{{ user.profile.image.url }}" alt=""></h5>
+    </div>
+    <div class="colomn">
+      <h5>Welcome to your dashboard {{ user.username }}</h5>
+      <h5>Your email is: {{ user.email }}</h5>
+    </div>
+  </div>
 {% endblock content %}

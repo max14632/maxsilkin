@@ -1,0 +1,13 @@
+{% extends "business/base.html" %}
+{% block content %}
+
+        <h2>Our Products</h2>
+        <ul class="list-group-flush">
+            {% for post in posts %}
+                <!-- <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">{{ post.title }}</h2> -->
+                <li class="list-group-item font-weight-bold">{{ post.title }} <br><br><span class='font-weight-normal'>{{ post.content }}</span></li>
+
+            {% endfor %}
+        </ul>
+
+{% endblock content %}
